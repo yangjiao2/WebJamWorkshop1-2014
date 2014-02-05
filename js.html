@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript</title>
+</head>
+<body>
+  <button onclick="this.style.display = 'none';">Hide on click</button>
+  <button id="show-text">Show / Hide text</button>
+  <p id="text">This is my text.</p>
+  <script>
+    document.getElementById("show-text").onclick = function() {
+      var text; // Indicate `text` is a local variable
+      // By default, all variables in javascript are global variables
+      text = document.getElementById('text');
+      text.style.display = (text.style.display != "none") ? "none" : "block";
+      /*
+        `variable = expression ? result1 : result2` is same as:
+
+        if (expression) {
+          variable = result1;
+        } else {
+          variable = result2;
+        }
+       */
+    }
+  </script>
+  <div id="countdown"></div>
+  <script src="countdown.js"></script>
+  <hr>
+  <h1>References:</h1>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide">MDN JavaScript Guide</a>
+  <a href="google-styleguide.googlecode.com/svn/trunk/javascriptguide.xml">Google JavaScript Style Guide</a>
+</body>
+</html>
